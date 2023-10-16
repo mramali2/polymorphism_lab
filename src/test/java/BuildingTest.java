@@ -15,8 +15,9 @@ public class BuildingTest {
     }
 
     @Test
-    void canEat(){
+    void canAddWifi(){
         assertThat(building.addWifi()).isEqualTo("Wifi set up");
     }
+
 
 }

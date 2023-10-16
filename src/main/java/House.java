@@ -12,18 +12,6 @@ public class House extends Building {
 
     }
 
-    public int getNumberOfFloors() {
-        return numberOfFloors;
-    }
-
-    public void setNumberOfFloors(int numberOfFloors) {
-        this.numberOfFloors = numberOfFloors;
-    }
-
-    public Boolean getHasGarden() {
-        return hasGarden;
-    }
-
     public void setHasGarden(Boolean hasGarden) {
         this.hasGarden = hasGarden;
     }
