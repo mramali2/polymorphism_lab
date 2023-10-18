@@ -1,3 +1,4 @@
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,4 +25,16 @@ public class ApartmentTest {
     void canGetBuildingCode(){
         assertThat(apartment.getBuildingCode()).isEqualTo(1234);
     }
+
+    @Test
+    void canAddWifi(){
+        assertThat(apartment.addWifi()).isEqualTo("models.Apartment wifi connected");
+    }
+
+    @Test
+    void canInstallLift(){
+        String result = apartment.installLift(5);
+        assertThat(result).isEqualTo("Apartment lift set up for 5 floors");
+    }
 }
+

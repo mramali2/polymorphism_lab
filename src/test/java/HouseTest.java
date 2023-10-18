@@ -25,4 +25,10 @@ public class HouseTest {
         assertThat(house.buildShed()).isEqualTo("No garden to build shed");
     }
 
+    @Test
+    void canAddWifi(){
+        assertThat(house.addWifi()).isEqualTo("House wifi connected");
+    }
+
+
 }

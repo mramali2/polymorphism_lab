@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Apartment extends Building {
+public class Apartment extends Building implements ILift {
 
     private int apartmentLevel;
     private int buildingCode;
@@ -17,5 +17,15 @@ public class Apartment extends Building {
 
     public int getBuildingCode() {
         return this.buildingCode;
+    }
+
+    @Override
+    public String addWifi() {
+        return "models.Apartment wifi connected";
+    }
+
+    @Override
+    public String installLift(int floors) {
+        return "Apartment lift set up for " + floors + " floors";
     }
 }

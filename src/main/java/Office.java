@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Office extends  Building{
+public class Office extends Building implements ILift{
 
     private String companyName;
     private int buildingCode;
@@ -36,5 +36,19 @@ public class Office extends  Building{
 
     public void increaseDesks(int increaseOfDesks) {
         this.numberOfDesks += increaseOfDesks;
+    }
+
+    @Override
+    public String addWifi() {
+        return "Office Wifi connected";
+    }
+
+    public String addWifi(int floorNumber){
+        return "Wifi connected to floor " + floorNumber;
+    }
+
+    @Override
+    public String installLift(int floors) {
+        return "Office lift set up for " + floors + " floors";
     }
 }

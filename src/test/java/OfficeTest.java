@@ -42,4 +42,22 @@ public class OfficeTest {
         office.increaseDesks(5);
         assertThat(office.getNumberOfDesks()).isEqualTo(25);
     }
+
+    @Test
+    void canaddWifi(){
+        assertThat(office.addWifi()).isEqualTo("Office Wifi connected");
+    }
+
+    @Test
+    void canAddWifiWithArgument(){
+        assertThat(office.addWifi(3)).isEqualTo(String.format("Wifi connected to floor %d",3));
+    }
+
+    @Test
+    void canInstallLift(){
+        String result = office.installLift(10);
+        assertThat(result).isEqualTo("Office lift set up for 10 floors");
+    }
+
+
 }

@@ -23,4 +23,12 @@ public class House extends Building {
             return"No garden to build shed";
         }
     }
+
+    @Override
+    public String addWifi(){
+        return "House wifi connected";
+    }
+
+
+
 }

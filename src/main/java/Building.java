@@ -13,9 +13,7 @@ public abstract class Building {
 
     }
 
-    public String addWifi(){
-        return "Wifi set up";
-    }
+    public abstract String addWifi();
 
 
 

@@ -4,11 +4,13 @@ public class EstateAgents {
     private String name;
     private double till;
     private ArrayList<Building> buildingsForSale;
+    private ArrayList<ILift> buildingsNeedingLifts;
 
     public EstateAgents(String name){
         this.name = name;
         this.till = 0;
         this.buildingsForSale = new ArrayList<>();
+        this.buildingsNeedingLifts = new ArrayList<>();
     }
 
     public void addBuilding(Building newBuilding) {
@@ -29,4 +31,13 @@ public class EstateAgents {
     public double getTill() {
         return this.till;
     }
+
+    public int countBuildingsNeedingLifts(){
+        return this.buildingsNeedingLifts.size();
+    }
+
+    public void addBuildingNeedingLift(ILift ilift){
+        this.buildingsNeedingLifts.add(ilift);
+    }
 }
+
